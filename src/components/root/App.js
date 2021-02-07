@@ -15,7 +15,10 @@ class App extends React.Component {
   
   handleSubmit = (event) => {
     event.preventDefault()
-    alert("Name: " + this.state.name + " Password: " + this.state.password)
+    console.dir({
+      name: this.state.name,
+      password: this.state.password
+    })
   }
 
   render() {
