@@ -15,19 +15,7 @@ class App extends React.Component {
   
   handleSubmit = (event) => {
     event.preventDefault()
-    alert("name: " + this.state.name +  " " + "password: " + this.state.password)
-  }
-
-  handleChangeName = (event) => {
-    this.setState({
-      name: event.target.value,
-    })
-  }
-
-  handleChangePassword = (event) => {
-    this.setState({
-      password: event.target.value,
-    })
+    alert("Name: " + this.state.name + " Password: " + this.state.password)
   }
 
   render() {
@@ -35,8 +23,7 @@ class App extends React.Component {
       <div className="App">
         <Form
           onSubmit={this.handleSubmit} 
-          onChangeName={this.handleChangeName} 
-          onChangePassword={this.handleChangePassword}
+          setState={this.setState.bind(this)}
         />
       </div>
     );
